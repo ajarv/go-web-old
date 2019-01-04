@@ -1,0 +1,12 @@
+{
+	"ImportPath": "github.com/ajarv/go-web",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-17-ga31c178",
+			"Rev": "a31c1782bfb10b7b3799d5ec06b5ccbd98c4ec7e"
+		}
+	]
+}
