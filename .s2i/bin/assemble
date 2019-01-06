@@ -24,7 +24,9 @@ cp -Rf /tmp/src/. ./
 
 echo "---> Building application from source..."
 echo "---> assemble in go-web"
-echi $(go version)
+
+
 export PATH="$PATH:/usr/local/go/bin"
+go version
 
 go build -o ../main
