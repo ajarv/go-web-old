@@ -27,6 +27,6 @@ echo "---> assemble in go-web"
 
 
 export PATH="$PATH:/usr/local/go/bin"
-go version
-
-go build -o ../main
+go get github.com/tools/godep
+godep version 
+godep go build -o ../main
