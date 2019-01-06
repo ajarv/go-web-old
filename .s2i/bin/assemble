@@ -25,12 +25,13 @@ cp -Rf /tmp/src/. ./
 echo "---> Building application from source..."
 echo "---> assemble in go-web"
 
-export GOPATH=/opt/app-root/src
-# mkdir  -p $GOPATH
+export GOPATH=/tmp/go
+mkdir  -p $GOPATH
 export PATH="$PATH:/usr/local/go/bin:${GOPATH}/bin"
 
 echo "---> GO PATH ${GOPATH}" 
 
 go get github.com/tools/godep
 godep version 
-godep go build -o ../main
+godep get
+go build -o ../main
