@@ -25,8 +25,8 @@ cp -Rf /tmp/src/. ./
 echo "---> Building application from source..."
 echo "---> assemble in go-web"
 
-export GOPATH=/tmp/go
-mkdir  -p $GOPATH
+export GOPATH=/opt/app-root
+# mkdir  -p $GOPATH
 export PATH="$PATH:/usr/local/go/bin:${GOPATH}/bin"
 
 echo "---> GO PATH ${GOPATH}" 
