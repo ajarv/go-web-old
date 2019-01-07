@@ -27,12 +27,12 @@ echo "---> assemble in go-web"
 
 export PATH="$PATH:/usr/local/go/bin"
 
-echo "---> GO PATH ${GOPATH}" 
-echo .
-pwd
-echo .
-ls -al
-echo .
+# echo "---> GO PATH ${GOPATH}" 
+# echo .
+# pwd
+# echo .
+# ls -al
+# echo .
 go get "github.com/gorilla/mux" "gopkg.in/yaml.v2"
 
 go build -o ../main
