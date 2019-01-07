@@ -19,13 +19,20 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
   mv /tmp/artifacts/. ./
 fi
 
-export GOPATH=/tmp
-export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
+echo "---> Installing application source..."
+cp -Rf /tmp/src/. ./
 
-go get github.com/tools/godep
-pushd /tmp/src
+echo "---> Building application from source..."
+echo "---> assemble in go-web"
 
-godep go install
+export PATH="$PATH:/usr/local/go/bin"
 
-popd
-cp $GOPATH/bin/main ../main
+echo "---> GO PATH ${GOPATH}" 
+echo .
+pwd
+echo .
+ls -al
+echo .
+go get "github.com/gorilla/mux" "gopkg.in/yaml.v2"
+
+go build -o ../main
