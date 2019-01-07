@@ -19,7 +19,11 @@ if [ "$(ls /tmp/artifacts/ 2>/dev/null)" ]; then
   mv /tmp/artifacts/. ./
 fi
 
+pwd
 ls -al .
+echo /tmp/src/
+ls -al /tmp/src/
+
 echo "---> Installing application source..."
 cp -Rf /tmp/src/. ./
 
